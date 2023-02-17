@@ -1,6 +1,6 @@
 {
   "name": "react-tooltip-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides a component to create tooltips",
   "scripts": {
     "rollup": "rollup -c",
@@ -64,7 +64,6 @@
   ],
   "dependencies": {
     "@popperjs/core": "2.11.6",
-    "outside-click-wrapper": "1.2.2",
     "react-popper": "2.3.0"
   }
 }

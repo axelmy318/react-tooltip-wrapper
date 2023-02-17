@@ -1,17 +1,16 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types'
-import { OutsideClickWrapper } from 'outside-click-wrapper'
 import './TooltipWrapper.css'
 import { usePopper } from 'react-popper';
 import { createPortal } from 'react-dom';
 
-const TooltipWrapper = ({ children, tooltip, placement, popperOptions }) => {
+const TooltipWrapper = ({ children, tooltip, placement }) => {
     const [referenceElement, setReferenceElement] = useState()
     const [popperElement, setPopperElement] = useState()
 
     const [showPopper, setShowPopper] = useState(false)
 
-    let { styles, attributes } = usePopper(referenceElement, popperElement, { placement: 'bottom' }, )
+    let { styles, attributes } = usePopper(referenceElement, popperElement, { placement: placement }, )
 
     return (<>
         { /* Content */ }
@@ -39,11 +38,15 @@ const Portal = ({ children }) => {
 }
 
 TooltipWrapper.propTypes = {
-    tooltip: PropTypes.any
+    tooltip: PropTypes.any,
+    placement: PropTypes.string,
+    tooltipStyle: PropTypes.object,
 }
 
 TooltipWrapper.defaultProps = {
-    tooltip: ""
+    tooltip: "",
+    placement: 'top',
+    tooltipStyle: {},
 }
 
 export default TooltipWrapper;
