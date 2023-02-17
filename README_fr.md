@@ -30,6 +30,7 @@ const Example = () => {
 
 export default Example
 ```
+Si `tooltip` vaut `null`, une chaine de charactère vide ou `undefined` : le tooltip sera désactivé complétement.
 
 
 ## Dépendances

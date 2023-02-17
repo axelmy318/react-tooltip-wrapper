@@ -30,6 +30,7 @@ const Example = () => {
 
 export default Example
 ```
+If `tooltip` is set to `null`, an empty string or `undefined` : the tooltip won't show at all.
 
 
 ## Dependencies
