@@ -19,7 +19,7 @@ const Template = (args) => {
 
 export const Primary = Template.bind({});
 Primary.args = {
-	tooltip: 'Test tooltip',
+	tooltip: 'dwada',
 	onShow: () => {console.log("On show")},
 	onHide: () => {console.log("On hide")},
 };
