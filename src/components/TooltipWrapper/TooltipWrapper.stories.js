@@ -19,9 +19,12 @@ const Template = (args) => {
 
 export const Primary = Template.bind({});
 Primary.args = {
-	tooltip: 'Test tooltip'
+	tooltip: 'Test tooltip',
+	onShow: () => {console.log("On show")},
+	onHide: () => {console.log("On hide")},
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+	tooltip: <span>Here is some <strong>JSX</strong></span>
 };

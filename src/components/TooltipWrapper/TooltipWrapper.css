@@ -4,15 +4,6 @@
 	border-radius: 8px;
 }
 
-.tooltip-visible {
-	transition: opacity 1s;
-	opacity: 1;
-	visibility: visible;
-	pointer-events: all;
-	animation-name: show;
-	animation-duration: .3s;
-	animation-fill-mode: forwards;
-}
 
 .tooltip-hidden {
 	opacity: 0;
@@ -21,6 +12,20 @@
 	animation-duration: .3s;
 	animation-fill-mode: forwards;
 	pointer-events: none;
+}
+
+.hide-init {
+	opacity: 0;
+	visibility: hidden;
+}
+.tooltip-visible {
+	transition: opacity 1s;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	animation-name: show;
+	animation-duration: .3s;
+	animation-fill-mode: forwards;
 }
 
 @keyframes hide {

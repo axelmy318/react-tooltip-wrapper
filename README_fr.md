@@ -44,3 +44,5 @@ Ce projet s'appuie sur [react-popper](https://www.npmjs.com/package/react-popper
 | tooltip | any | "" | L'élément à montrer dans le tooltip |
 | tooltipStyle | object | {} | Le style CSS du tooltip |
 | placement | string | "bottom" | Le placement du tooltip. Voir la documentation de [react-popper](https://www.npmjs.com/package/react-popper) |
+| onShow | function | null | Une fonction appelée quand le tooltip est affiché |
+| onHide | function | null | Une fonction appelée quand le tooltip est caché |

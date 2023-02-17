@@ -1,6 +1,6 @@
 {
   "name": "react-tooltip-wrapper",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Provides a component to create tooltips",
   "scripts": {
     "rollup": "rollup -c",
