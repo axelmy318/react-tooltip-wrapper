@@ -15,16 +15,15 @@ Provides a components to create tooltips
 
 ```javascript
 import React from 'react'
-import { Tooltip } from 'react-readme-printer'
+import { TooltipWrapper } from 'react-tooltip-wrapper'
 
 const Example = () => {
     return (
-        <MarkdownPrinter
-            username='axelmy318'
-            repository='react-readme-printer'
-            branch='master'
-            file='custom_readme_name'
-        />
+        <TooltipWrapper 
+        tooltip={<><h1>Tooltip</h1><p>Hi, I'm a tooltip 🙂</p></>} 
+        >
+            Hover me to see who I am...
+        </TooltipWarrper>
     )
     
 }
