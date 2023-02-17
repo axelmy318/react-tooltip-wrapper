@@ -10,7 +10,7 @@ const TooltipWrapper = ({ children, tooltip, tooltipStyle, placement, onShow, on
 
     const [showPopper, setShowPopper] = useState(false)
 
-    let { styles, attributes } = usePopper(referenceElement, popperElement, { placement: placement }, )
+    let { styles, attributes, update } = usePopper(referenceElement, popperElement, { placement: placement }, )
 
     useLayoutEffect(() => {
         if(!showPopper && popperElement) {
@@ -20,7 +20,8 @@ const TooltipWrapper = ({ children, tooltip, tooltipStyle, placement, onShow, on
 
     const showTooltip = state => {
         setShowPopper(state)
-
+        update()
+        
         if(state)
             onShow()
         else
