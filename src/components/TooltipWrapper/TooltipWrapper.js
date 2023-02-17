@@ -62,7 +62,7 @@ TooltipWrapper.propTypes = {
 
 TooltipWrapper.defaultProps = {
     tooltip: "",
-    placement: 'top',
+    placement: 'bottom',
     tooltipStyle: {},
     onShow: () => {},
     onHide: () => {},
