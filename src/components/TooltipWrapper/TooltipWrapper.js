@@ -8,7 +8,7 @@ const TooltipWrapper = ({ children, tooltip, tooltipStyle, placement, onShow, on
     const [referenceElement, setReferenceElement] = useState()
     const [popperElement, setPopperElement] = useState()
 
-    const [showPopper, setShowPopper] = useState(true)
+    const [showPopper, setShowPopper] = useState(false)
 
     let { styles, attributes, update } = usePopper(
         referenceElement, 
