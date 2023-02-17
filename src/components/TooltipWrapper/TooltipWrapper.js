@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import PropTypes from 'prop-types'
 import './TooltipWrapper.css'
 import { usePopper } from 'react-popper';
@@ -21,7 +21,7 @@ const TooltipWrapper = ({ children, tooltip, tooltipStyle, placement, onShow, on
     const showTooltip = state => {
         setShowPopper(state)
         update()
-        
+
         if(state)
             onShow()
         else
