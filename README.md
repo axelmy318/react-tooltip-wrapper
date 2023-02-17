@@ -15,7 +15,7 @@ Provides a components to create tooltips
 
 ```javascript
 import React from 'react'
-import { MarkdownPrinter } from 'react-readme-printer'
+import { Tooltip } from 'react-readme-printer'
 
 const Example = () => {
     return (
@@ -44,4 +44,4 @@ This project relies on [react-popper](https://www.npmjs.com/package/react-popper
 |--|--|--|--|
 | tooltip | any | "" | The element to be displayed inside the tooltip |
 | tooltipStyle | object | {} | The CSS styling of the tooltip |
-| placement | string | "bottom-start" | The placement of the tooltip. See [react-popper](https://www.npmjs.com/package/react-popper) documentation |
+| placement | string | "bottom" | The placement of the tooltip. See [react-popper](https://www.npmjs.com/package/react-popper) documentation |

@@ -11,18 +11,18 @@ const TooltipWrapper = ({ children, tooltip, placement, popperOptions }) => {
 
     const [showPopper, setShowPopper] = useState(false)
 
-    let { styles, attributes } = usePopper(referenceElement, popperElement, { placement: 'bottom-start' }, )
+    let { styles, attributes } = usePopper(referenceElement, popperElement, { placement: 'bottom' }, )
 
     return (<>
         { /* Content */ }
-        <div style={{position: 'relative'}} ref={setReferenceElement} onMouseEnter={() => setShowPopper(true)} onMouseLeave={() => setShowPopper(false)}>
+        <span style={{position: 'relative'}} ref={setReferenceElement} onMouseEnter={() => setShowPopper(true)} onMouseLeave={() => setShowPopper(false)}>
             {children}
-        </div>
+        </span>
 
         { /* Tooltip */ }
         <Portal>
             <div 
-            className={ showPopper ? "tooltip" : "tooltip tooltip-hidden" }
+            className={ showPopper ? "react-tooltip-wrapper tooltip-visible" : "react-tooltip-wrapper tooltip-hidden" }
             ref={setPopperElement}
             style={{...styles.popper}}
             {...attributes.popper}

@@ -1,4 +1,53 @@
+.react-tooltip-wrapper {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+	padding: 5px;
+	border-radius: 8px;
+	margin-top: 10px;
+}
+
+.tooltip-visible {
+	transition: opacity 1s;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	animation-name: show;
+	animation-duration: .3s;
+	animation-fill-mode: forwards;
+}
+
 .tooltip-hidden {
-	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	animation-name: hide;
+	animation-duration: .3s;
+	animation-fill-mode: forwards;
 	pointer-events: none;
+}
+
+@keyframes hide {
+	0% {
+	  opacity: 1;
+	  visibility: visible;
+	}
+	50% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 0;
+	  visibility: hidden;
+	}
+}
+
+@keyframes show {
+	0% {
+	  opacity: 0;
+	  visibility: hidden;
+	}
+	50% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 1;
+	  visibility: visible;
+	}
 }
