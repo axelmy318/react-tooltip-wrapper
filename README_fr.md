@@ -46,3 +46,4 @@ Ce projet s'appuie sur [react-popper](https://www.npmjs.com/package/react-popper
 | placement | string | "bottom" | Le placement du tooltip. Voir la documentation de [react-popper](https://www.npmjs.com/package/react-popper) |
 | onShow | function | null | Une fonction appelée quand le tooltip est affiché |
 | onHide | function | null | Une fonction appelée quand le tooltip est caché |
+| offset | int | 10 | L'offset du tooltip par rapport à son parent (plus grand = plus loin) |

@@ -4,13 +4,27 @@ import './TooltipWrapper.css'
 import { usePopper } from 'react-popper';
 import { createPortal } from 'react-dom';
 
-const TooltipWrapper = ({ children, tooltip, tooltipStyle, placement, onShow, onHide }) => {
+const TooltipWrapper = ({ children, tooltip, tooltipStyle, placement, onShow, onHide, offset }) => {
     const [referenceElement, setReferenceElement] = useState()
     const [popperElement, setPopperElement] = useState()
 
-    const [showPopper, setShowPopper] = useState(false)
+    const [showPopper, setShowPopper] = useState(true)
 
-    let { styles, attributes, update } = usePopper(referenceElement, popperElement, { placement: placement }, )
+    let { styles, attributes, update } = usePopper(
+        referenceElement, 
+        popperElement, 
+        { 
+            placement,
+            modifiers: [
+                {
+                    name: 'offset',
+                    options: {
+                        offset: [0, offset]
+                    }
+                }
+            ] 
+        },
+    )
 
     useLayoutEffect(() => {
         if(!showPopper && popperElement) {
@@ -59,6 +73,7 @@ TooltipWrapper.propTypes = {
     tooltipStyle: PropTypes.object,
     onShow: PropTypes.func,
     onHide: PropTypes.func,
+    offset: PropTypes.number
 }
 
 TooltipWrapper.defaultProps = {
@@ -67,6 +82,7 @@ TooltipWrapper.defaultProps = {
     tooltipStyle: {},
     onShow: () => {},
     onHide: () => {},
+    offset: 10,
 }
 
 export default TooltipWrapper;
