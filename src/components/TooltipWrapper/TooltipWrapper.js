@@ -33,7 +33,8 @@ const TooltipWrapper = ({ children, tooltip, tooltipStyle, placement, onShow, on
     }, [popperElement])
 
     const showTooltip = state => {
-        let isThereATooltip = state && tooltip !== "" && tooltip !== null && typeof tooltip !== undefined
+        console.log(state, tooltip)
+        let isThereATooltip = tooltip !== "" && tooltip !== null && typeof tooltip !== undefined
         if (!isThereATooltip) return
         
         setShowPopper(state)
