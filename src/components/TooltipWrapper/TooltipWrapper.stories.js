@@ -9,12 +9,12 @@ export default {
 };
 
 const Template = (args) => {
-    return (<>
+    return (<div style={{marginTop: '1000px', marginBottom: '1000px'}}>
         <TooltipWrapper {...args}>
 			Test tooltip on this very text
 		</TooltipWrapper>
 		Test abcd
-	</>)
+	</div>)
 };
 
 export const Primary = Template.bind({});

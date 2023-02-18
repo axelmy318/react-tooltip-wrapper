@@ -21,6 +21,12 @@ const TooltipWrapper = ({ children, tooltip, tooltipStyle, placement, onShow, on
                     options: {
                         offset: [0, offset]
                     }
+                },
+                {
+                    name: 'flip',
+                    options: {
+                        fallbackPlacements: ['top', 'bottom', 'right', 'left']
+                    }
                 }
             ] 
         },
